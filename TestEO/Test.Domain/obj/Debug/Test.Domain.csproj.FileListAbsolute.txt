@@ -1,0 +1,5 @@
+C:\Projects\TestEO\Test.Domain\bin\Debug\Test.Domain.dll
+C:\Projects\TestEO\Test.Domain\bin\Debug\Test.Domain.pdb
+C:\Projects\TestEO\Test.Domain\obj\Debug\Test.Domain.csprojResolveAssemblyReference.cache
+C:\Projects\TestEO\Test.Domain\obj\Debug\Test.Domain.dll
+C:\Projects\TestEO\Test.Domain\obj\Debug\Test.Domain.pdb

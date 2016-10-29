@@ -35,6 +35,7 @@ namespace Test.API.Tests.Controllers
             var response = default(ComposedResponse<PersonViewModel>);
             result.TryGetContentValue(out response);
             Assert.IsNotNull(response.Model);
+            Console.WriteLine(String.Format("Response: {0}", response.Model.ToString()));
         }
         [TestMethod]
         public async Task GetPerson()
@@ -51,6 +52,7 @@ namespace Test.API.Tests.Controllers
             var response = default(SingleResponse<PersonViewModel>);
             result.TryGetContentValue(out response);
             Assert.IsNotNull(response.Model);
+            Console.WriteLine(String.Format("Response: {0}", response.Model.ToString()));
         }
         [TestMethod]
         public async Task CreatePerson()
@@ -71,7 +73,8 @@ namespace Test.API.Tests.Controllers
             //Assert
             var response = default(SingleResponse<PersonViewModel>);
             result.TryGetContentValue(out response);
-            Assert.IsNotNull(response.Model);
+            Assert.IsNotNull(response.Model.id);
+            Console.WriteLine(String.Format("Response: {0}", response.Model.ToString()));
         }
         [TestMethod]
         public async Task UpdatePerson()
@@ -94,6 +97,7 @@ namespace Test.API.Tests.Controllers
             var response = default(SingleResponse<PersonViewModel>);
             result.TryGetContentValue(out response);
             Assert.IsTrue(response.Message == "Record Updated Successfully!");
+            Console.WriteLine(String.Format("Response: {0}", response.Message.ToString()));
         }
         [TestMethod]
         public async Task DeletePerson()
@@ -110,6 +114,7 @@ namespace Test.API.Tests.Controllers
             var response = default(SingleResponse<PersonViewModel>);
             result.TryGetContentValue(out response);
             Assert.IsTrue(response.Message == "Record Deleted Successfully!");
+            Console.WriteLine(String.Format("Response: {0}", response.Message.ToString()));
         }
 
     }
